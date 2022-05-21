@@ -36,9 +36,7 @@ import postfix.parser.ParserError;
 /**
  * @author Henrique Rebelo
  *
- * ajustar o scanner pra identificar o y como ID e colocar no hash como ID
- * mudar o interpreter
- * public int interp(Expr expression) ->> ADICIONAR hashtable para fazer o mapeamento pro y
+ * Adjustment of interpreter file to receive ID values
  */
 public class Postfix {
 
@@ -114,10 +112,8 @@ public class Postfix {
 			}
 
 			Parser parser = new Parser(tokens);
-			//System.out.println(parser);
 
 			Expr expr = parser.parse();
-			//System.out.println(parser);
 
 			// debugging for parsing/ast
 			if(debugging) {
